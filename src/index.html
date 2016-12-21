@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <%= t.include("partials/_head.html") %>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <%= t.include("partials/_nav.html") %>
+
+    <%= t.include("partials/_ad.html", { type: "banner" }) %>
+
+    <h1>Videos of the year 2016</h1>
+
+    <p class="chatter">
+      Watch some of our favorite and most popular Seattle Times video stories
+    </p>
+
+    <div class="feature-player">
+      <div class="video-container aspect-outer pending">
+        <div class="aspect-inner">
+          <video
+            data-account="1509317113"
+            data-player="Nk8AFQkhe"
+            data-embed="default"
+            id="player"
+            class="video-js" controls>
+          </video>
+        </div>
+      </div>
+      <hr>
+      <div class="playlist-controls">
+        <div class="playlist-container loading"></div>
+        </div>
+    </div>
+
+    <%= t.include("partials/_navBottom.html") %>
+
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>

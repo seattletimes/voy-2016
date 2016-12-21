@@ -1,0 +1,19 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "double-fill"
+    },
+    "live": {
+      "bucket": "projects.seattletimes.com",
+      "path": "2016/videos-of-the-year"
+    }
+  },
+  "title": "Videos of the year 2016",
+  "description": "Watch some of our favorite and most popular Seattle Times video stories",
+  "url": "https://projects.seattletimes.com/2016/videos-of-the-year/",
+  "image": "assets/social.jpg",
+  "sheets": [],
+  "production": true,
+  "embedded": false
+}
