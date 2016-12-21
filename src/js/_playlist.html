@@ -2,7 +2,7 @@
 <% data.forEach(function(item) { %>
   <li class="playlist-item" data-id="<%= item.id %>">
     <div class="image-frame">
-      <img src="<%= item.thumbnail %>">
+      <img src="<%= item.poster %>">
     </div>
     <span class="caption"><%= item.name %></span>
     <% if (item.link) { %>
