@@ -121,7 +121,7 @@ window.onload = function(){
 
 
 var getThumbnails = function({ playlist }) {
-  console.log(playlist);
+  // console.log(playlist);
   playlistContainer.innerHTML = playlistTemplate(playlist);
 
   setClickEvent(playlist);
@@ -146,7 +146,7 @@ var handleActivePlayer = function(thisPlaylist, number) {
   "mute": false,
   }).play();
 
-console.log(number + " " + thisPlaylist.length);
+// console.log(number + " " + thisPlaylist.length);
 
 
   // // Destroy the player and replace with thumbnail
@@ -166,6 +166,7 @@ var setClickEvent = function(chosenPlaylist) {
 
 document.querySelectorAll('.playlist-item').forEach(el => el.addEventListener('click', () => {
   // overviewVid.pause();
+  window.location = "#player";
   jwplayer('botr_rymV46af_UXknQA8J_div').pause();
   window.location = "#player";
   var mediaID = el.getAttribute('data-id');
